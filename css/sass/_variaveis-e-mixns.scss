@@ -1,0 +1,9 @@
+$color-font-menu: #001f50;
+
+$font-family: 'Ubuntu', sans-serif;
+
+@mixin type($size, $weight){
+    font-family: $font-family;
+    font-size: $size + px;
+    font-weight: bold;
+}

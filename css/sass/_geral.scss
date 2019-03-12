@@ -1,0 +1,34 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.main-header {
+  padding: 30px 0;
+}
+.main-header__social {
+  display: flex;
+}
+.main-header__social li{
+  display: inline-block;
+  margin-left: 35px;
+}
+.main-header_social p {
+  @include type(18, 'bold');
+}
+.main-header_social p{
+  color: $color-font-menu;
+}
+.navbar {
+  position: relative;
+  bottom: -40px;
+}
+.navbar a {
+  text-transform: uppercase;
+  @include type(18, 'bold');
+  color: $color-font-menu;
+  transition: all .3s;
+}
+.navbar a:hover {
+  color: #FFF;
+  background-color: $color-font-menu;
+}
