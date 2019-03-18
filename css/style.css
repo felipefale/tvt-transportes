@@ -1,8 +1,109 @@
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0; }
+
+.slick-list:focus {
+  outline: none; }
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: ''; }
+
+.slick-track:after {
+  clear: both; }
+
+.slick-loading .slick-track {
+  visibility: hidden; }
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px; }
+
+[dir='rtl'] .slick-slide {
+  float: right; }
+
+.slick-slide img {
+  display: block; }
+
+.slick-slide.slick-loading img {
+  display: none; }
+
+.slick-slide.dragging img {
+  pointer-events: none; }
+
+.slick-initialized .slick-slide {
+  display: block; }
+
+.slick-loading .slick-slide {
+  visibility: hidden; }
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
+*:after, *:before, * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 80%; }
+
 body {
   font-family: 'Ubuntu', sans-serif; }
 
+img {
+  max-width: 100%; }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 .main-header {
-  padding: 30px 0; }
+  padding: 30px 0 0; }
 
 .main-header__social {
   display: -webkit-box;
@@ -11,29 +112,211 @@ body {
 
 .main-header__social li {
   display: inline-block;
-  margin-left: 35px; }
+  margin-left: 15px; }
 
-.main-header_social p {
+@media (max-width: 720px) {
+  .main-header__social ul {
+    -webkit-padding-start: 0;
+    padding-inline-start: 0; } }
+
+.main-header__social p {
   font-family: "Ubuntu", sans-serif;
-  font-size: 18px;
-  font-weight: bold; }
-
-.main-header_social p {
+  font-size: 1.125rem;
+  font-weight: bold;
   color: #001f50; }
 
 .navbar {
   position: relative;
-  bottom: -40px; }
+  padding-bottom: 0; }
+  @media (max-width: 720px) {
+    .navbar {
+      margin: auto; } }
 
-.navbar a {
+.navbar-light .navbar-nav .nav-link {
   text-transform: uppercase;
   font-family: "Ubuntu", sans-serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   color: #001f50;
   -webkit-transition: all .3s;
-  transition: all .3s; }
+  transition: all .3s;
+  padding: 10px 20px; }
 
-.navbar a:hover {
+.navbar-light .navbar-nav .nav-link:hover {
   color: #FFF;
   background-color: #001f50; }
+
+/*FOOTER*/
+.main_footer {
+  padding: 70px 0;
+  background-image: url("../img/bg-footer.png");
+  color: #FFF;
+  font-weight: 700; }
+
+.main_footer h3 {
+  margin-bottom: 20px;
+  color: #0b7cb1;
+  font-weight: 700; }
+
+.main_footer ul {
+  margin-bottom: 40px;
+  font-weight: 500; }
+
+.main_footer li {
+  font-weight: 700;
+  margin-bottom: 10px; }
+
+.main_footer li img {
+  margin-right: 10px; }
+
+.logo_footer {
+  margin-bottom: 20px; }
+
+.logo_footer + p {
+  line-height: 2;
+  font-weight: 500; }
+
+.form_footer input {
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border: 2px solid #0b7cb1;
+  background: transparent;
+  color: #FFF; }
+
+.form_footer ::-webkit-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #FFF;
+  opacity: 1;
+  /* Firefox */
+  font-weight: 700; }
+
+.form_footer ::-ms-input-placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #FFF;
+  opacity: 1;
+  /* Firefox */
+  font-weight: 700; }
+
+.form_footer ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #FFF;
+  opacity: 1;
+  /* Firefox */
+  font-weight: 700; }
+
+.form_footer :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-weight: 700;
+  color: #FFF; }
+
+.form_footer ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-weight: 700;
+  color: #FFF; }
+
+.form_footer button {
+  float: right;
+  padding: 10px 25px;
+  background-color: #0b7cb1;
+  color: #FFF;
+  font-weight: 700;
+  border: none; }
+
+/*OWL CUSTOM*/
+.owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 40px auto 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.owl-dots .owl-dot {
+  margin: 0 2px !important;
+  height: 15px !important;
+  width: 15px !important;
+  border: 4px solid #0b7cb1 !important;
+  border-radius: 50% !important; }
+
+.sobre {
+  padding: 70px 0; }
+  .sobre h1 {
+    font-family: 'Ubuntu';
+    font-weight: bold;
+    font-size: 3rem;
+    color: #0b7cb1; }
+  .sobre p {
+    font-size: 1.125rem;
+    font-weight: 700;
+    max-width: 400px;
+    line-height: 2.375rem; }
+
+.abrangencia {
+  height: 470px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/abrangencia.png"); }
+
+.cda {
+  padding: 70px 0; }
+  .cda h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 3.4375rem;
+    font-weight: bold;
+    color: #0b7cb1;
+    margin-bottom: 20px; }
+  .cda p {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 2.375; }
+
+.servicos_online {
+  padding: 70px 0;
+  background-color: #0b7cb1;
+  color: #FFF; }
+
+.servicos_online__title {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+  text-transform: uppercase; }
+
+/*DEPOIMENTOS*/
+.depoimentos {
+  padding: 70px 0; }
+
+.depoimentos .container {
+  max-width: 800px; }
+
+.depoimentos__title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #0b7cb1;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold; }
+
+.depoimentos__descricao {
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 2em; }
+
+.depoimento_pessoa {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  font-style: italic; }
+
+@media (max-width: 720px) {
+  .menu-mobile {
+    margin: 20px 0; }
+  .sobre img {
+    margin-bottom: 20px; }
+  .depoimentos .container {
+    padding: 0 40px; } }

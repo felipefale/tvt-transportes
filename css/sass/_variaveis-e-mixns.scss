@@ -1,9 +1,16 @@
 $color-font-menu: #001f50;
-
 $font-family: 'Ubuntu', sans-serif;
+$color-title-blue: #0b7cb1;
+$bg-blue: #0b7cb1;
 
 @mixin type($size, $weight){
     font-family: $font-family;
-    font-size: $size + px;
+    font-size: $size + rem;
     font-weight: bold;
+}
+
+@mixin responsivo-mobile(){
+    @media (max-width: 720px){
+        @content;
+    }
 }

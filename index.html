@@ -1,68 +1,279 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
-	<title></title>
-	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home</title>
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,700i" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 	<header class="main-header">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 col-sm-12 d-flex justify-content-center justify-content-md-start">
 					<img class="img-fluid" src="img/tvt-transportes.png" alt="">
 				</div>
-				<div class="col-md-8">
-					<div class="row justify-content-end">
-						<div class="main-header__social">
-							<p>Informações: (83) 3225.2414</p>
-							<ul>
-								<li><img src="img/whatsapp-tvt-transportes.png" alt="What's app TVT Transportes" title="What's app TVT Transportes"></li>
-								<li><img src="img/instagram-tvt-transportes.png" alt="Instagram TVT Transportes" title="Instagram TVT Transportes"></li>
-								<li><img src="img/facebook-tvt-transportes.png" alt="Facebook TVT Transportes" title="Facebook TVT Transportes"></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="row">
-						<nav class="navbar navbar-expand-lg ">
-							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-							  <span class="navbar-toggler-icon"></span>
-							</button>
-							<div class="collapse navbar-collapse" id="navbarNavDropdown">
-							  <ul class="navbar-nav">
-								<li class="nav-item">
-								  <a class="nav-link" href="#">Inicial <span class="sr-only">(current)</span></a>
-								</li>
-								<li class="nav-item">
-								  <a class="nav-link" href="#">A Empresa</a>
-								</li>
-								<li class="nav-item">
-								  <a class="nav-link" href="#">Serviços</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Clientes</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Área do Cliente</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#">Contato</a>
-								</li>
-								
-							  </ul>
-							</div>
-						  </nav>
+				<div class="col-md-8 col-sm-12">
+					<div
+						class="main-header__social mt-4 d-flex mb align-items-md-baseline align-items-center justify-content-md-end flex-md-row flex-column">
+						<p>Informações: (83) 3225.2414</p>
+						<ul>
+							<li><img src="img/whatsapp-tvt-transportes.png" alt="What's app TVT Transportes"
+									title="What's app TVT Transportes"></li>
+							<li><img src="img/instagram-tvt-transportes.png" alt="Instagram TVT Transportes"
+									title="Instagram TVT Transportes"></li>
+							<li><img src="img/facebook-tvt-transportes.png" alt="Facebook TVT Transportes"
+									title="Facebook TVT Transportes"></li>
+						</ul>
 					</div>
 				</div>
+			</div><!-- /row -->
+
+			<div class="row justify-content-md-end menu-mobile">
+				<nav class="navbar navbar-light navbar-expand-lg ">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+						aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">Inicial <span class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">A Empresa</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Serviços</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Clientes</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Área do Cliente</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">Contato</a>
+							</li>
+
+						</ul>
+					</div>
+				</nav>
 			</div>
+
 		</div>
 	</header>
 
+	<section class="intro container-fluid">
+		<div class="single-item row">
+			<div><img src="img/slide/txt-transporte.png" style="max-width: 100%;" alt=""></div>
+			<div><img src="img/slide/txt-transporte.png" style="max-width: 100%;" alt=""></div>
+			<div><img src="img/slide/txt-transporte.png" style="max-width: 100%;" alt=""></div>
+		</div>
+	</section>
 
+	<section class="sobre">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="img/sobre.png" alt="Sobre a TVT Transporte">
+				</div>
+				<article class="col-md-6">
+					<h1>TVT Transportes</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, libero officiis explicabo
+						modi sit placeat facilis fugiat porro aperiam, itaque repudiandae eum quibusdam iure quidem
+						minima eveniet! Illo, temporibus excepturi.</p>
+				</article>
+			</div>
+	</section>
+
+	<section class="abrangencia"></section>
+
+	<section class="cda">
+		<div class="container">
+			<div class="row">
+				<article class="col-md-5 text-right">
+					<h1>Centro de<br> Distribuição e<br> armazenamento</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quibusdam maxime, quasi qui
+						reiciendis tempore tenetur odio suscipit doloribus voluptas quo, a numquam temporibus aliquid
+						veniam provident eaque eius optio.</p>
+				</article>
+				<div class="col-md-7">
+					<img src="img/cda.png" title="Centro de Distribuição e armazenamento"
+						alt="Centro de Distribuição e armazenamento">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="servicos_online">
+		<div class="container">
+			<div class="row ">
+				<article class="col-md-3 text-center">
+					<img src="img/rastreamento.png" alt="rastreamento tvt" title="rastreamento tvt">
+					<h2 class="servicos_online__title">Rastremanento</h2>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, necessitatibus cupiditate
+						veritatis officia tempora doloremque! Quod consequuntur deserunt provident nesciunt assumenda
+						explicabo repellat placeat ad dicta voluptas et, odio esse.</p>
+				</article>
+				<article class="col-md-3 text-center">
+					<img src="img/obter-cotacao.png" alt="rastreamento tvt" title="rastreamento tvt">
+					<h2 class="servicos_online__title">Obter cotação</h2>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, necessitatibus cupiditate
+						veritatis officia tempora doloremque! Quod consequuntur deserunt provident nesciunt assumenda
+						explicabo repellat placeat ad dicta voluptas et, odio esse.</p>
+				</article>
+				<article class="col-md-3 text-center">
+					<img src="img/solicitar-coleta.png" alt="rastreamento tvt" title="rastreamento tvt">
+					<h2 class="servicos_online__title">Solicitar coleta</h2>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, necessitatibus cupiditate
+						veritatis officia tempora doloremque! Quod consequuntur deserunt provident nesciunt assumenda
+						explicabo repellat placeat ad dicta voluptas et, odio esse.</p>
+				</article>
+				<article class="col-md-3 text-center">
+					<img src="img/calcular-cubagem.png" alt="rastreamento tvt" title="rastreamento tvt">
+					<h2 class="servicos_online__title">Calcular cubagem</h2>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, necessitatibus cupiditate
+						veritatis officia tempora doloremque! Quod consequuntur deserunt provident nesciunt assumenda
+						explicabo repellat placeat ad dicta voluptas et, odio esse.</p>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<section class="container depoimentos">
+		<div class="row">
+			<div class="owl-carousel">
+				<div class="container">
+					<div class="row">
+						<figure class="col-md-3">
+							<img src="img/depoimento.png" alt="">
+						</figure>
+						<div class="col-md-9">
+							<h2 class="depoimentos__title">Depoimentos</h2>
+							<p class="depoimentos__descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Commodi dolor vero modi rerum voluptatem eius dignissimos! Deleniti, vero dolor.
+								Molestias saepe ratione beatae nemo consequatur! Inventore consequatur itaque iste
+								tempore.</p>
+							<p class="depoimento_pessoa">João da Silva - Casas Bahia</p>
+						</div>
+					</div><!-- row -->
+				</div> <!-- item carousel -->
+
+				<div class="container">
+					<div class="row">
+						<figure class="col-md-3">
+							<img src="img/depoimento.png" alt="">
+						</figure>
+						<div class="col-md-9">
+							<h2 class="depoimentos__title">Depoimentos</h2>
+							<p class="depoimentos__descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Commodi dolor vero modi rerum voluptatem eius dignissimos! Deleniti, vero dolor.
+								Molestias saepe ratione beatae nemo consequatur! Inventore consequatur itaque iste
+								tempore.</p>
+							<p class="depoimento_pessoa">João da Silva - Casas Bahia</p>
+						</div>
+					</div><!-- row -->
+				</div> <!-- item carousel -->
+
+				<div class="container">
+					<div class="row">
+						<figure class="col-md-3">
+							<img src="img/depoimento.png" alt="">
+						</figure>
+						<div class="col-md-9">
+							<h2 class="depoimentos__title">Depoimentos</h2>
+							<p class="depoimentos__descricao">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+								Commodi dolor vero modi rerum voluptatem eius dignissimos! Deleniti, vero dolor.
+								Molestias saepe ratione beatae nemo consequatur! Inventore consequatur itaque iste
+								tempore.</p>
+							<p class="depoimento_pessoa">João da Silva - Casas Bahia</p>
+						</div>
+					</div><!-- row -->
+				</div> <!-- item carousel -->
+			</div>
+		</div>
+	</section>
+
+	<footer class="main_footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h3>JOÃO PESSOA, PB<br> Matriz</h3>
+					<ul>
+						<li><img src="img/icones-footer/location.png" alt="Endereço TVT Transportes"
+								title="Endereço TVT Transportes"> Av. Nilo Peçanha, 000, Bessa. CEP: 58.000-000</li>
+						<li><img src="img/icones-footer/phone.png" alt="Telefone TVT Transporte"
+								title="Telefone TVT Transporte"> (83) 2222.0000 / (83) 99999.0000 </li>
+						<li><img src="img/icones-footer/e-mail.png" alt="Contato TVT Transporte"
+								title="Contato TVT Transporte"> contato@tvttransportes.com.br</li>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<h3>RECIFE, PE<br> Filial</h3>
+					<ul>
+						<li><img src="img/icones-footer/location.png" alt="Endereço TVT Transportes"
+								title="Endereço TVT Transportes"> Av. Nilo Peçanha, 000, Bessa. CEP: 58.000-000</li>
+						<li><img src="img/icones-footer/phone.png" alt="Telefone TVT Transporte"
+								title="Telefone TVT Transporte"> (83) 2222.0000 / (83) 99999.0000 </li>
+						<li><img src="img/icones-footer/e-mail.png" alt="Contato TVT Transporte"
+								title="Contato TVT Transporte"> contato@tvttransportes.com.br</li>
+					</ul>
+				</div>
+
+				<div class="col-md-4">
+					<h3>SÃO PAULO, SP<br> Filial</h3>
+					<ul>
+						<li><img src="img/icones-footer/location.png" alt="Endereço TVT Transportes"
+								title="Endereço TVT Transportes"> Av. Nilo Peçanha, 000, Bessa. CEP: 58.000-000</li>
+						<li><img src="img/icones-footer/phone.png" alt="Telefone TVT Transporte"
+								title="Telefone TVT Transporte"> (83) 2222.0000 / (83) 99999.0000 </li>
+						<li><img src="img/icones-footer/e-mail.png" alt="Contato TVT Transporte"
+								title="Contato TVT Transporte"> contato@tvttransportes.com.br</li>
+					</ul>
+				</div>
+
+				<div class="col-md-4">
+					<img class="logo_footer" src="img/tvt-transporte-logo-footer.png" alt="TVT Transporte logo" title="TVT Transporte logo">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, magni tenetur! Placeat sunt nisi
+						sequi eveniet ut ullam molestias! Deleniti earum iure consequuntur commodi ea maxime laudantium
+						impedit! Soluta, inventore.</p>
+				</div>
+
+				<div class="col-md-4">
+					<h3>ENVIE-NOS UMA MENSAGEM</h3>
+					<p>Preencha o formulário abaixo com suas<br> dúvidas que logo entraremos em contato.</p>
+
+					<form class="form_footer">
+						<input type="text" placeholder="Nome"><br>
+						<input type="tel" placeholder="Telefone"><br>
+						<input type="text" placeholder="Mensagem"><br>
+						<button type="submit">Enviar</button>
+					</form>
+				</div>
+
+				<div class="col-md-4">
+					<h3>Siga-nos no Instagram</h3>
+					<div id='instafeed'></div>
+
+				</div>
+			</div>
+
+
+		</div>
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/scripts/slick.min.js"></script>
 	<script src="js/main.js" charset="utf-8"></script>
 </body>
+
 </html>

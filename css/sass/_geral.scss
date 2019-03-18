@@ -1,34 +1,129 @@
+*:after, *:before, *{box-sizing: border-box;}
+html {
+  font-size: 80%;
+}
 body {
   font-family: 'Ubuntu', sans-serif;
 }
-
+img {max-width: 100%;}
+ul {list-style: none; margin: 0; padding: 0;}
 .main-header {
-  padding: 30px 0;
+  padding: 30px 0 0;
 }
 .main-header__social {
   display: flex;
 }
 .main-header__social li{
   display: inline-block;
-  margin-left: 35px;
+  margin-left: 15px;
 }
-.main-header_social p {
-  @include type(18, 'bold');
+.main-header__social ul {
+  @include responsivo-mobile {
+    padding-inline-start: 0;
+  }
 }
-.main-header_social p{
+.main-header__social p {
+  @include type(1.125, 'bold');
   color: $color-font-menu;
+
 }
+
 .navbar {
   position: relative;
-  bottom: -40px;
+  padding-bottom: 0;
+  @include responsivo-mobile {
+    margin: auto;
+  }
+  
 }
-.navbar a {
+.navbar-light .navbar-nav .nav-link {
   text-transform: uppercase;
-  @include type(18, 'bold');
+  @include type(1.125, 'bold');
   color: $color-font-menu;
   transition: all .3s;
+  padding: 10px 20px;
 }
-.navbar a:hover {
+.navbar-light .navbar-nav .nav-link:hover {
   color: #FFF;
   background-color: $color-font-menu;
+}
+
+
+/*FOOTER*/
+.main_footer {
+  padding: 70px 0;
+  background-image: url('../img/bg-footer.png');
+  color: #FFF;
+  font-weight: 700;
+}
+.main_footer h3 {
+  margin-bottom: 20px;
+  color: $color-title-blue;
+  font-weight: 700;
+}
+.main_footer ul {
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+.main_footer li {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.main_footer li img {
+  margin-right: 10px;
+}
+.logo_footer {
+  margin-bottom: 20px;
+}
+.logo_footer + p {
+  line-height: 2;
+  font-weight: 500;
+}
+.form_footer input{
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border: 2px solid $bg-blue;
+  background: transparent;
+  color: #FFF;
+}
+
+.form_footer ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #FFF;
+  opacity: 1; /* Firefox */
+  font-weight: 700;
+}
+
+.form_footer :-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-weight: 700;
+  color: #FFF;
+}
+
+.form_footer ::-ms-input-placeholder { /* Microsoft Edge */
+  font-weight: 700;
+  color: #FFF;
+}
+.form_footer button {
+  float: right;
+  padding: 10px 25px;
+  background-color: $bg-blue;
+  color: #FFF;
+  font-weight: 700;
+  border: none;
+}
+
+
+/*OWL CUSTOM*/
+
+.owl-dots {
+  display: flex;
+  margin: 40px auto 0;
+  justify-content: center;
+}
+.owl-dots .owl-dot {
+  margin: 0 2px!important;
+  height: 15px!important;
+  width: 15px!important;
+  border: 4px solid $color-title-blue!important;
+  border-radius: 50%!important;
 }

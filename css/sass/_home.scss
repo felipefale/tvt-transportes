@@ -1,0 +1,87 @@
+.sobre {
+    padding: 70px 0;
+    h1 {
+        font-family: 'Ubuntu';
+        font-weight: bold;
+        font-size: 3rem;
+        color: #0b7cb1;
+    }
+    p {
+        font-size: 1.125rem;
+        font-weight: 700;
+        max-width: 400px;
+        line-height: 2.375rem;
+    }
+}
+
+.abrangencia {
+    height: 470px;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../img/abrangencia.png');
+}
+
+.cda {
+    padding: 70px 0;
+    h1 {
+        @include type(3.4375, 700 );
+        color: $color-title-blue;
+        margin-bottom: 20px;
+    }
+    p {
+        @include type(1.125, 300);
+        line-height: 2.375;
+    }
+    
+}
+
+.servicos_online {
+    padding: 70px 0;
+    background-color: $bg-blue;
+    color: #FFF;
+  }
+.servicos_online__title {
+    @include type(1.5, 'bold');
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+/*DEPOIMENTOS*/
+
+.depoimentos {
+    padding: 70px 0;
+}
+
+.depoimentos .container {
+    max-width: 800px;;
+}
+
+.depoimentos__title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: $color-title-blue;
+    @include type(1.5, 'bold');
+}
+
+.depoimentos__descricao {
+    font-weight: 500;
+    @include type(1, 'bold');
+    line-height: 2em;
+}
+.depoimento_pessoa {
+    @include type(1, 'bold');
+    font-style: italic;
+
+}
+
+@media (max-width: 720px){
+    .menu-mobile {
+        margin: 20px 0;
+    }
+    .sobre img {
+        margin-bottom: 20px;
+    }
+    .depoimentos .container {
+        padding: 0 40px;
+    }
+}

@@ -33,14 +33,14 @@ function gulpJS(){
 gulp.task('mainjs', gulpJS);
 
 function pluginJS(){
-	return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/bootstrap/dist/js/bootstrap.min.js'])
+	return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/slick-carousel/slick/slick.min.js', 'node_modules/owl-carousel/dist/owl.carousel.min.js'])
 	.pipe(gulp.dest('./js/scripts/'))
 }
 
 gulp.task('pluginjs', pluginJS)
 
 function pluginCSS(){
-	return gulp.src(['node_modules/bootstrap/dist/css/bootstrap.min.css'])
+	return gulp.src(['node_modules/bootstrap/dist/css/bootstrap.min.css', 'node_modules/slick-carousel/slick/slick-theme.css', 'node_modules/slick-carousel/slick/slick.css', 'node_modules/owl-carousel/dist/assets/owl.carousel.min.css', 'node_modules/owl-carousel/dist/assets/owl.theme.default.min.css'])
 	.pipe(gulp.dest('./css/'))
 }
 
@@ -66,7 +66,7 @@ gulp.task('browser-sync', browser)
 
 function watch(){
 	gulp.watch('./css/**/*.scss', sassCompiler);
-	gulp.watch('./js/*.js', gulpJS);
+	gulp.watch('./js/scripts/*.js', gulpJS);
 	gulp.watch('./*.html').on('change', browserSync.reload);
 }
 
