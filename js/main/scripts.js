@@ -27,6 +27,23 @@ $(document).ready(function(){
         origin: 'top',
         distance: '40px'
     });
-    // ScrollReveal().reveal('.js-left')    
+
+    var feed = new Instafeed({
+
+        get: 'user',
+
+		userId: '',
+
+		accessToken: '',
+
+		limit: '8',
+
+		sortBy: 'most-recent',
+
+		resolution: 'low_resolution',
+
+    });
+
+    feed.run();
     
   });

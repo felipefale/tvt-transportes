@@ -51,7 +51,8 @@ function pluginJS() {
     'node_modules/owl-carousel/dist/owl.carousel.js',
 	'node_modules/bootstrap/dist/js/bootstrap.min.js',
 	'node_modules/scrollreveal/dist/scrollreveal.min.js',
-	'node_modules/slick-carousel/slick/slick.min.js'
+	'node_modules/slick-carousel/slick/slick.min.js',
+	'node_modules/instafeed.js/instafeed.min.js'
   ])
   .pipe(concat('plugins.js'))
   .pipe(gulp.dest('js/'))
