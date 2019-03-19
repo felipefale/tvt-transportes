@@ -74,6 +74,13 @@
 
 }
 
+.js-an-left {
+    opacity: 0;
+}
+
+.js-an-left.bounceInLeft{
+    opacity: 1;
+}
 @media (max-width: 720px){
     .menu-mobile {
         margin: 20px 0;

@@ -1,3 +1,4 @@
+// Adiciona os modulos instalados
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
@@ -5,72 +6,98 @@ const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
-const imagemin = require('gulp-imagemin');
 
-function sassCompiler(){
-	return gulp.src('./css/sass/*.scss')
-	.pipe(sass())
-	.pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-	.pipe(gulp.dest('./css/'))
-	.pipe(browserSync.stream())
+// Funçao para compilar o SASS e adicionar os prefixos
+function compilaSass() {
+  return gulp
+  .src('css/scss/**/*.scss')
+  .pipe(sass({
+    outputStyle: 'compressed'
+  }))
+  .pipe(autoprefixer({
+    browsers: ['last 2 versions'],
+    cascade: false
+  }))
+  .pipe(gulp.dest('css/'))
+  .pipe(browserSync.stream());
 }
-gulp.task('sass', sassCompiler);
 
-function gulpJS(){
-	return gulp.src('./js/scripts/*.js')
-	.pipe(concat('main.js'))
-    .pipe(babel({
-            presets: ['env']
-    }))
-    .pipe(uglify())
-	.pipe(gulp.dest('./js/'))
-	.pipe(browserSync.stream())
+// Tarefa de gulp para a função de SASS
+gulp.task('sass', function(done){
+  compilaSass();
+  done();
+});
+
+// Função para juntar o JS
+function gulpJS() {
+  return gulp
+  .src('js/main/*.js')
+  .pipe(concat('main.js'))
+  .pipe(babel({
+    presets: ['env']
+  }))
+  .pipe(uglify())
+  .pipe(gulp.dest('js/'))
+  .pipe(browserSync.stream())
 }
 
 gulp.task('mainjs', gulpJS);
 
-function pluginJS(){
-	return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/slick-carousel/slick/slick.min.js', 'node_modules/owl-carousel/dist/owl.carousel.min.js'])
-	.pipe(gulp.dest('./js/scripts/'))
+// JS Plugins
+function pluginJS() {
+  return gulp
+  .src([
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/owl-carousel/dist/owl.carousel.js',
+	'node_modules/bootstrap/dist/js/bootstrap.min.js',
+	'node_modules/scrollreveal/dist/scrollreveal.min.js',
+	'node_modules/slick-carousel/slick/slick.min.js'
+  ])
+  .pipe(concat('plugins.js'))
+  .pipe(gulp.dest('js/'))
+  .pipe(browserSync.stream())
 }
 
-gulp.task('pluginjs', pluginJS)
+gulp.task('pluginjs', pluginJS);
 
-function pluginCSS(){
-	return gulp.src(['node_modules/bootstrap/dist/css/bootstrap.min.css', 'node_modules/slick-carousel/slick/slick-theme.css', 'node_modules/slick-carousel/slick/slick.css', 'node_modules/owl-carousel/dist/assets/owl.carousel.min.css', 'node_modules/owl-carousel/dist/assets/owl.theme.default.min.css'])
-	.pipe(gulp.dest('./css/'))
-}
+// JS Plugins
+function pluginCSS() {
+	return gulp
+	.src([
+		'node_modules/bootstrap/dist/css/bootstrap.min.css',
+		'node_modules/owl-carousel/dist/assets/owl.carousel.css',
+		'node_modules/owl-carousel/dist/assets/owl.theme.default.css',
+		'node_modules/slick-carousel/slick/slick.css'
+	])
+	.pipe(concat('_plugins.scss'))
+	.pipe(gulp.dest('css/scss/'))
+	.pipe(browserSync.stream())
+  }
+  
+  gulp.task('plugincss', pluginCSS);
 
-gulp.task('plugincss', pluginCSS)
-
-function imageMin(){
-	return gulp.src('./img/*')
-	.pipe(imagemin())
-	.pipe(gulp.dest('./img/'))
-}
-
-gulp.task('imagemin', imageMin)
-
+// Função para iniciar o browser
 function browser() {
-	browserSync.init({
-		server: {
-			baseDir: './'
-		}
-	})
+  browserSync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
 }
 
-gulp.task('browser-sync', browser)
+// Tarefa para iniciar o browser-sync
+gulp.task('browser-sync', browser);
 
-function watch(){
-	gulp.watch('./css/**/*.scss', sassCompiler);
-	gulp.watch('./js/scripts/*.js', gulpJS);
-	gulp.watch('./*.html').on('change', browserSync.reload);
+// Função de watch do Gulp
+function watch() {
+  gulp.watch('css/scss/**/*.scss', compilaSass);
+  gulp.watch('js/main/*.js', gulpJS);
+  gulp.watch('js/plugins/*.js', gulpJS);
+  gulp.watch(['*.html']).on('change', browserSync.reload);
 }
 
-gulp.task('watch', watch)
+// Inicia a tarefa de watch
+gulp.task('watch', watch);
 
-
-gulp.task('default', gulp.parallel('watch', 'browser-sync', 'pluginjs', 'plugincss','imagemin' ))
+// Tarefa padrão do Gulp, que inicia o watch e o browser-sync
+gulp.task('default', gulp.parallel('sass', 'mainjs','plugincss', 'pluginjs', 'watch', 'browser-sync'));
