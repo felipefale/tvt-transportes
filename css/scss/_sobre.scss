@@ -1,0 +1,65 @@
+.sobre_intro {
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0.5)), url('../img/intro-sobre.png');
+}
+.missao {
+    padding: 70px 0;
+    background-color: $bg-gray;
+    h1 {
+        text-transform: uppercase;
+        color: $color-black-smooth;
+        &:after {
+            content: '';
+            margin: 10px 0 20px;
+            display: block;
+            height: 3px;
+            width: 60px;
+            background: $color-black-smooth;
+        }
+    }
+    p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+    img {
+        position: relative;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+}
+
+.quem_somos {
+    .quem_somos__img{
+        position: relative;
+       top: -40px;
+        max-width: 300px;
+        height: 560px;
+        object-fit: cover;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    h1 {
+        text-transform: uppercase;
+        color: $color-black-smooth;
+        &:after{
+            content: '';
+            margin: 10px 0 20px;
+            display: block;
+            height: 3px;
+            width: 60px;
+            background: $color-black-smooth;
+        }
+    }
+    p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+    .caracteristicas {
+        padding: 40px 0;
+        text-align: center;
+        
+    }
+    .img_star {
+        margin-bottom: 20px;
+        width: 100px;
+        height: 100px;
+    }
+}

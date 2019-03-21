@@ -2,6 +2,8 @@ $color-font-menu: #001f50;
 $font-family: 'Ubuntu', sans-serif;
 $color-title-blue: #0b7cb1;
 $bg-blue: #0b7cb1;
+$bg-gray: #F5F5F5;
+$color-black-smooth: #212121;
 
 @mixin type($size, $weight){
     font-family: $font-family;

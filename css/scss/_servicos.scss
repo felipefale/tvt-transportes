@@ -1,0 +1,20 @@
+.servicos_intro {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0.5)), url('../img/intro-servicos.png');
+    background-position: center;
+  }
+  .servicos__main_title {
+    margin: 40px 20px;
+  }
+
+  .servico_info {
+    padding: 20px;
+    background-color: $bg-gray;
+  }
+  .servicos  {
+    article {
+      text-align: center;
+    }
+    figure {
+      margin-bottom: 0;
+    }
+  }

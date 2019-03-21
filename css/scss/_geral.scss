@@ -112,6 +112,23 @@ ul {list-style: none; margin: 0; padding: 0;}
   border: none;
 }
 
+.section_intro {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  object-fit: cover;
+  color: #FFF;
+  text-transform: uppercase;
+  h1:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #FFF;
+    margin: 0 auto;
+    @include type(1.5, 700);
+  }
+}
 
 /*OWL CUSTOM*/
 
@@ -127,3 +144,4 @@ ul {list-style: none; margin: 0; padding: 0;}
   border: 4px solid $color-title-blue!important;
   border-radius: 50%!important;
 }
+
