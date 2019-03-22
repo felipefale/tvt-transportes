@@ -5,16 +5,67 @@
   .servicos__main_title {
     margin: 40px 20px;
   }
-
-  .servico_info {
-    padding: 20px;
-    background-color: $bg-gray;
+  .servicos {
+    padding-bottom: 50px;
   }
-  .servicos  {
-    article {
-      text-align: center;
-    }
+  .servicos__item  {
+      margin-bottom: 20px;
     figure {
       margin-bottom: 0;
+    }
+    h1 {
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.125rem;
+      line-height: 1.5;
+    }
+    .servico_info {
+      box-shadow: rgba(33, 33, 33, 0.1) 0px 4px 6px 0px;
+      padding: 20px;
+      text-align: center;
+      background-color: $bg-gray;
+    }
+  }
+
+  .rastreamento {
+    padding: 70px 0 0;
+    background-color: $bg-blue;
+    h1 {
+      text-transform: uppercase;
+      color: #FFF;
+      &:after {
+        content: '';
+        margin: 30px auto;
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: #FFF;
+      }
+    }
+    p {
+      color: #FFFF;
+      line-height: 1.5;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+    img {
+      position: relative;
+      bottom: -75px;
+    }
+  }
+
+  /*DESTAQUES*/
+  .destaques {
+    padding: 150px 0 70px;
+  }
+  .destaques_item {
+    margin-bottom: 20px;
+    img {
+      margin-right: 10px;
+      width: 50px;
+      height: 50px;
     }
   }

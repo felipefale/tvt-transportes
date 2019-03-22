@@ -1,0 +1,32 @@
+.contato_intro {
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0.5)), url('../img/intro-contato.png');
+    background-position: center;
+}
+.contato {
+    padding: 70px 0;
+    color: #757575;
+    h1 {
+        text-transform: uppercase;
+        &:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            margin: 20px auto 20px;
+            background: #757575;
+        }
+    }
+    p {
+        max-width: 50%;
+        margin: 20px auto 40px;
+    }
+    form input {
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid #007bff;
+    }
+    form textarea {
+        border: 1px solid #007bff;
+        margin-bottom: 20px;
+    }
+}

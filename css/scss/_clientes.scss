@@ -1,0 +1,27 @@
+.clientes {
+    padding: 70px 0;
+    color: #FFF;
+    background-color: $bg-blue;
+    h1 {
+        text-transform: uppercase;
+
+        &:after {
+            content: '';
+            display: block;
+            margin: 25px 0 20px;
+            width: 60px;
+            height: 4px;
+            background-color:#fff;
+        }
+    }
+    p {
+        margin-bottom: 40px;
+        max-width: 700px;
+        line-height: 2;
+        font-size: 1.125rem;
+        font-weight: 300!important;
+    }
+    img {
+        margin-bottom: 30px;
+    }
+}

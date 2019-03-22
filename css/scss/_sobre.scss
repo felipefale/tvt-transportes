@@ -28,13 +28,14 @@
 }
 
 .quem_somos {
+    padding: 70px 0 50px;
     .quem_somos__img{
-        position: relative;
-       top: -40px;
-        max-width: 300px;
-        height: 560px;
         object-fit: cover;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin-bottom: 20px;
+        @include responsivo-mobile(){
+            margin-bottom: 40px;
+        }
     }
     h1 {
         text-transform: uppercase;
@@ -52,14 +53,17 @@
         font-size: 1.5rem;
         line-height: 1.5;
     }
-    .caracteristicas {
-        padding: 40px 0;
-        text-align: center;
-        
-    }
-    .img_star {
-        margin-bottom: 20px;
-        width: 100px;
-        height: 100px;
-    }
+   
+}
+
+.caracteristicas_geral {
+    padding: 40px 0;
+    text-align: center;
+    background-color: $bg-gray;
+}
+
+.img_star {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
 }
