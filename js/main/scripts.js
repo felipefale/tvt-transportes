@@ -45,5 +45,9 @@ $(document).ready(function(){
     });
 
     feed.run();
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true
+      })
     
   });

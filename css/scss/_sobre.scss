@@ -1,69 +1,22 @@
 .sobre_intro {
   background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0.5)), url('../img/intro-sobre.png');
 }
-.missao {
+.empresa {
     padding: 70px 0;
-    background-color: $bg-gray;
-    h1 {
-        text-transform: uppercase;
-        color: $color-black-smooth;
-        &:after {
-            content: '';
-            margin: 10px 0 20px;
-            display: block;
-            height: 3px;
-            width: 60px;
-            background: $color-black-smooth;
-        }
-    }
-    p {
-        font-size: 1.5rem;
-        line-height: 1.5;
-    }
-    img {
-        position: relative;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
+    background-color: #F5F5F5;
     
 }
-
-.quem_somos {
-    padding: 70px 0 50px;
-    .quem_somos__img{
-        object-fit: cover;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        margin-bottom: 20px;
-        @include responsivo-mobile(){
-            margin-bottom: 40px;
-        }
-    }
-    h1 {
-        text-transform: uppercase;
-        color: $color-black-smooth;
-        &:after{
-            content: '';
-            margin: 10px 0 20px;
-            display: block;
-            height: 3px;
-            width: 60px;
-            background: $color-black-smooth;
-        }
-    }
+.empresa_info {
+    margin: 40px auto;
+    max-width: 500px;
     p {
-        font-size: 1.5rem;
-        line-height: 1.5;
+        font-size: 1.125rem;
+        line-height: 1.8;
     }
-   
 }
-
-.caracteristicas_geral {
-    padding: 40px 0;
-    text-align: center;
-    background-color: $bg-gray;
-}
-
-.img_star {
-    margin-bottom: 20px;
-    width: 100px;
-    height: 100px;
+.estrutura {
+    padding: 70px 0;
+    h3 {
+        margin-top: 20px;
+    }
 }

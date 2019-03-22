@@ -52,7 +52,8 @@ function pluginJS() {
 	'node_modules/bootstrap/dist/js/bootstrap.min.js',
 	'node_modules/scrollreveal/dist/scrollreveal.min.js',
 	'node_modules/slick-carousel/slick/slick.min.js',
-	'node_modules/instafeed.js/instafeed.min.js'
+		'node_modules/lightbox2/dist/js/lightbox.min.js',
+    'node_modules/instafeed.js/instafeed.min.js'
   ])
   .pipe(concat('plugins.js'))
   .pipe(gulp.dest('js/'))
@@ -68,7 +69,8 @@ function pluginCSS() {
 		'node_modules/bootstrap/dist/css/bootstrap.min.css',
 		'node_modules/owl-carousel/dist/assets/owl.carousel.css',
 		'node_modules/owl-carousel/dist/assets/owl.theme.default.css',
-		'node_modules/slick-carousel/slick/slick.css'
+		'node_modules/slick-carousel/slick/slick.css',
+		'node_modules/lightbox2/dist/css/lightbox.min.css'
 	])
 	.pipe(concat('_plugins.scss'))
 	.pipe(gulp.dest('css/scss/'))
